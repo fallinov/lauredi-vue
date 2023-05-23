@@ -70,14 +70,14 @@ dans le dossier `templates/` de ce projet.**
 * (optionnel) Ajouter le code CSS spécifique aux pages
   dans les composants de page `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
 
-### Étape 4 - Création d'un magasin de données pour les réalisations
-* Ajouter des data au composant `PageAccueil.vue`
-  représentant les réalisations (image, titre, description) de la page d'accueil.
-* Parcourir les data pour générer l'affichage des réalisations.
+### Étape 4 - Création d'un tableau des réalisations
+* Ajouter le tableau JavaScript des réalisations (image, titre, description) au composant `PageAccueil.vue`
+* Vous trouverez le tableau des réalisations dans le fichier `templates/realisations.js`
+* Parcourir le tableau pour générer l'affichage des réalisations.
 
 ### Étape 5 - Créer un composant `Realisation.vue` 
-* Créer un composant représentant une réalisation avec un ou plusieurs propriétés (props)
-lui permettant de recevoir les données de la réalisation.
+* Créer un composant représentant une réalisation avec une ou plusieurs propriétés (props)
+  lui permettant de recevoir les données de la réalisation.
 
 ### Étape 6 - Modifier le titre du document HTML `<title>` 
 * Ajouter le lifecycle hook `beforeMount` aux pages `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
