@@ -37,15 +37,13 @@ npm run lint
 ## Objectifs de l'exercice
 
 Transformer le site de Laure Dinateur https://kode.ch/101/lauredi/ en SPA en utilisant :
-* Vue.js V2 : https://fr.vuejs.org/v2/guide/
+* Vue.js V3 : https://fr.vuejs.org/v2/guide/
 * Vue CLI : https://cli.vuejs.org/
 * Vue router : https://router.vuejs.org/
 * Composants monofichiers
 
 **Vous trouverez une copie du site statique Laure Dinateur
 dans le dossier `templates/` de ce projet.**
-
-## Étapes
 
 ### Étape 1 - Cloner le dépôt, télécharger les paquets et créer une nouvelle branche
 
@@ -56,8 +54,9 @@ dans le dossier `templates/` de ce projet.**
 * Créer les pages `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
   dans `src/views/` avec uniquement un `<h1>` contenant le titre de la page.
 * Définir les routes dans `src/router/index.js`, et les tester.
-* Création d'un menu de navigation `<router-link>` sommaire
-  dans `src/App.vue` et ajout du `<router-view>`.
+* Dans `src/App.vue` :
+  * Créer un menu de navigatio en utilisant `<router-link>` pour faire les liens 
+  * Ajout du `<router-view>` qui affichera la page correspondante à la route définie dans `src/router/index.js`
 
 ### Étape 3 - Intégration des contenus HTML/CSS et images
 * Copie des images : copier les images dans : `public/img/`
