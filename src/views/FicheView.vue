@@ -1,5 +1,10 @@
 <script setup>
-defineProps(['nom'])
+defineProps({
+  nom: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <template>

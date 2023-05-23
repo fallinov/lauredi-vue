@@ -2,12 +2,11 @@
 
 ## Avant de démarrer l'exercice
 
-1. Cloner ce dépôt
-2. Télécharger les paquets `npm install`
-3. Ajouter SASS `npm install -D sass`
+1. Cloner ce dépôt 
+2. Créer une nouvelle branche. Ex: `steve-étape-1`
+3. Télécharger les paquets `npm install`
 4. Formater les fichiers `npm run format`
 5. Fixer les erreurs de codage `npm run lint`
-6. Créer une nouvelle branche pour démarrer l'exercice
 
 ## Commandes utiles
 ### Télécharger les paquets
@@ -37,7 +36,8 @@ npm run lint
 
 ## Objectifs de l'exercice
 
-Transformer le site de Laure Dinateur https://kode.ch/101/lauredi/ en SPA en utilisant :
+Transformer le site de Laure Dinateur https://kode.ch/101/lauredi/ 
+en SPA (Single Page Application) en utilisant :
 * Vue.js V3 : https://fr.vuejs.org/v2/guide/
 * Vue CLI : https://cli.vuejs.org/
 * Vue router : https://router.vuejs.org/
@@ -46,9 +46,7 @@ Transformer le site de Laure Dinateur https://kode.ch/101/lauredi/ en SPA en uti
 **Vous trouverez une copie du site statique Laure Dinateur
 dans le dossier `templates/` de ce projet.**
 
-### Étape 1 - Cloner le dépôt, télécharger les paquets et créer une nouvelle branche
-
-### Étape 2 - Création des pages et navigation (Vue router)
+### Étape 1 - Création des pages et navigation (Vue router)
 
 ![Exemple de résultat pour étape 2](_supports/etape-2.png "Exemple de résultat pour étape 2")
 
@@ -59,7 +57,7 @@ dans le dossier `templates/` de ce projet.**
   * Créer un menu de navigatio en utilisant `<router-link>` pour faire les liens 
   * Ajout du `<router-view>` qui affichera la page correspondante à la route définie dans `src/router/index.js`
 
-### Étape 3 - Intégration des contenus HTML/CSS et images
+### Étape 2 - Intégration des contenus HTML/CSS et images
 * Copie des images : copier les images dans : `public/img/`
 * Copie des CSS dans : `public/css/`
 * Modification de `public/index.html`
@@ -71,23 +69,23 @@ dans le dossier `templates/` de ce projet.**
 * (optionnel) Ajouter le code CSS spécifique aux pages
   dans les composants de page `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
 
-### Étape 4 - Création d'un tableau des réalisations
+### Étape 3 - Création d'un tableau des réalisations
 * Ajouter le tableau JavaScript des réalisations (image, titre, description) au composant `PageAccueil.vue`
 * Vous trouverez le tableau des réalisations dans le fichier `templates/realisations.js`
 * Parcourir le tableau pour générer l'affichage des réalisations.
 
-### Étape 5 - Créer un composant `Realisation.vue` 
+### Étape 4 - Créer un composant `Realisation.vue` 
 * Créer un composant représentant une réalisation avec une ou plusieurs propriétés (props)
   lui permettant de recevoir les données de la réalisation.
 
-### Étape 6 - Modifier le titre du document HTML `<title>` 
+### Étape 5 - Modifier le titre du document HTML `<title>` 
 * Ajouter le lifecycle hook `beforeMount` aux pages `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
 * Utiliser `document.title` pour modifier le titre du document en fonction de la page :
   * `PageAccueil.vue` => `"Laure Dinateur | Graphiste"`
   * `PageContact.vue` => `"Me contacter | Laure Dinateur"`
   * `PageInformations.vue` => `"Informations | Laure Dinateur"`
 
-### Étape 7 - Modifier le titre du document HTML via le routeur `<title>`
+### Étape 6 - Modifier le titre du document HTML via le routeur `<title>`
 * Changer le titre du document à chaque changement de route en utilisant
   l'intercepteur de navigation `router.afterEach((to, from)`
   https://router.vuejs.org/fr/guide/advanced/navigation-guards.html#intercepteurs-de-navigation
