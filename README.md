@@ -4,9 +4,10 @@
 
 1. Cloner ce dépôt
 2. Télécharger les paquets `npm install`
-3. Formater les fichiers `npm run format`
-4. Fixer les erreurs de codage `npm run lint`
-5. Créer une nouvelle branche pour démarrer l'exercice
+3. Ajouter SASS `npm install -D sass`
+4. Formater les fichiers `npm run format`
+5. Fixer les erreurs de codage `npm run lint`
+6. Créer une nouvelle branche pour démarrer l'exercice
 
 ## Commandes utiles
 ### Télécharger les paquets
