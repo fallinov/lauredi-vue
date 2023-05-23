@@ -1,0 +1,252 @@
+/************************
+******** GENERAL ********
+************************/
+
+/* Palette des couleurs :  https://coolors.co/e7e9eb-fdfffc-2ec4b6-e71d36-011627 */
+
+/* Importation des polices Web Google */
+@import url('https://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400,400i,700,700i,800');
+
+/* Couleur et polices de base du site */
+body {
+    background-color: #fdfffc ;
+    color: #011627;
+    font-family: 'Open Sans', sans-serif; /* Ne pas oublier de terminer avec une police générique */
+    font-size: 1rem; /* = 1 x 16px */
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Police des titres */
+h1, h2, h3, h4, h5, h6,
+.logo {
+    font-family: 'Changa One', cursive;
+    font-weight: 400; /* Pas oublier de préciser l'épaisseur */
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0 0 1em;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0 0 .75em;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    color: #e71d36;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%; /* Empêche le débordement des images */
+    height: auto; /* Règle problème des tailles saisies en HTML */
+    width: auto;
+}
+
+/***********************
+******** HEADER ********
+***********************/
+
+header {
+    background-color: #011627;
+    padding: 5px 0 0 0;
+    margin: 0 0 30px 0;
+}
+
+header .logo {
+    text-align: center;
+    margin: 0;
+}
+
+header .nom {
+    color: #2ec4b6;
+    font-size: 1.75rem;
+    margin: 15px 0;
+    line-height: 0.8;
+}
+
+header .metier {
+    color: #e71d36;
+    margin: -5px 0 0; /*-5px haut 0 g/d 0 bas */
+}
+
+/***********************
+******** NAV MENU ******
+************************/
+header nav {
+    text-align: center;
+    padding: 10px 0;
+    margin: 20px 0 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav a,
+header nav a:visited {
+    color: #fdfffc;
+    padding: 15px 10px;
+    font-weight: 800;
+}
+
+header nav a.actif,
+header nav a:hover {
+    color: #2ec4b6;
+}
+
+header nav a[href="index.html"] {
+    display: none;
+}
+
+/***********************
+******** MAIN ********
+************************/
+
+main {
+    margin: 0 5%;
+}
+
+/***********************
+******** FOOTER ********
+************************/
+
+footer {
+    text-align: center;
+    padding: 50px 0 0; /* 50px en haut */
+}
+
+footer nav {
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li img {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+
+    -webkit-transition: -webkit-filter 500ms linear;
+    transition: filter 500ms linear;
+}
+
+footer ul li img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+/***********************
+****** PAGE INDEX ******
+************************/
+
+.page-index .realisations {
+    list-style-type: none; /* suppression des puces */
+    margin: 0;
+    padding: 0;
+}
+
+.page-index .realisations li {
+    display: inline-block;
+    width: 45%;
+    margin: 2.5%;
+    vertical-align: top;
+}
+
+.page-index .realisations li a {
+    color: #011627;
+}
+
+.page-index .realisations figure {
+    margin: 0;
+    background-color: #e7e9eb;
+}
+
+.page-index .realisations figcaption {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/***********************
+****** PAGE INFOS ******
+************************/
+
+.page-infos .profile-photo {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+}
+
+.page-infos h1 {
+    text-align: center;
+}
+
+/***********************
+****** PAGE CONTACT ****
+************************/
+
+.page-contact .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 10px;
+}
+
+.page-contact .contact-info li {
+    margin-bottom: .5em;
+}
+
+.page-contact .contact-info li a {
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 0 2px;
+
+    padding: 0 0 0 30px;
+}
+
+/*
+Sélecteur d'attribut CSS
+http://www.w3schools.com/css/css_attribute_selectors.asp
+    - commence par   ^=
+    - contient       *=
+    - se termine par $=
+*/
+
+.page-contact .contact-info li a[href^="tel"] {
+    background-image: url('../img/phone.png');
+}
+
+.page-contact .contact-info li a[href^="mailto"] {
+    background-image: url('../img/mail.png');
+}
+
+.page-contact .contact-info li a[href*="twitter"] {
+    background-image: url('../img/twitter.png');
+}
+
+.page-contact .contact-info li a[href*="facebook"] {
+    background-image: url('../img/facebook.png');
+}

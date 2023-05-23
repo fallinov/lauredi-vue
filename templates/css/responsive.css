@@ -1,0 +1,77 @@
+/* Pour les écrans >= 480px */
+@media only screen and (min-width: 480px) {
+
+    /*Passage sur 3 cols*/
+    .page-index .realisations li {
+        width: calc(100%/3 - 5%);
+    }
+
+    /* Habillage flottant pour l'image de la page infos*/
+    .page-infos .profile-photo {
+        float: left; /* pas oublier overflow: auto au parent */
+        margin: 0 5% 20px 0;
+    }
+
+    .page-contact .col1,
+    .page-contact .col2 {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+
+    }
+
+    .page-contact .col2 {
+        width: 40%;
+        margin-left: 10%;
+    }
+} /* min-width: 480px */
+
+/* Pour les écrans >= 660px */
+@media screen and (min-width: 660px) {
+
+    header {
+        border-bottom: 5px solid #2ec4b6;
+    }
+
+    header .logo {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        width: 42%;
+        margin-left: 5%;
+    }
+
+    header .logo .nom {
+        font-size: 2.5rem;
+    }
+
+    header .logo .metier {
+        margin-bottom: 20px;
+    }
+
+    header nav {
+        display: inline-block;
+        vertical-align: top;
+        text-align: right;
+        width: 48%;
+        margin-right: 5%;
+        font-size: 1.125rem;
+    }
+}
+
+/* Pour les écrans >= 910px
+    - Afficher le lien vers l'accueil: index.html
+*/
+@media screen and (min-width: 910px) {
+
+    /* affiche le lien accueil */
+    header nav a[href="index.html"] {
+        display: inline;
+    }
+
+    main, footer {
+        max-width: calc(910px - 5%);
+        margin: 0 auto; /* 0 haut/bas & auto gauche/droite */
+    }
+}
+

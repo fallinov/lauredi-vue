@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Ne pas oublier de préciser la langue -->
+<head>
+    <!-- Encodage des caractères de la page -->
+    <meta charset="UTF-8">
+
+    <!-- viewport - Ajuste la taille de la page aux différents appareils : pc, mobiles, tablettes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page. Visible dans l'onglet du navigateur -->
+    <title>Informations | Laure Dinateur | Graphiste</title>
+
+    <!-- Auteur -->
+    <meta name="author" content="Laure Dinateur">
+
+    <!-- Description de la page -->
+    <meta name="description" content="Présentation de Laure Dinateur graphiste à Delémont" />
+
+    <!-- Styles -->
+    <!-- Reset CSS redéfinit le style de toutes les balises  HTML -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Feuille de style principale du site -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Feuille de style contenant les adaptations pour les différents tailles d'écran -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Icône de base du site : FAVICON -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16">
+</head>
+<body class="page-infos">
+<!-- Astuce : ajouter un class page-xxx à <body> afin de différencier les pages en CSS -->
+
+<!-- Entête du site -->
+<header>
+    <!-- Logo du site -->
+    <a class="logo" href="index.html">
+        <div class="nom">Laure Dinateur</div>
+        <div class="metier">Graphiste</div>
+    </a><nav><!-- Menu de navigation -->
+        <ul>
+            <li>
+                <a href="index.html">Accueil</a>
+            </li>
+            <li>
+                <!-- Lien actif : On ajoute la classe .actif au lien
+                représentant la page actuelle -->
+                <a class="actif" href="informations.html">Qui suis-je ?</a>
+            </li>
+            <li>
+                <a href="contact.html">Me contacter</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!--
+Contenu principal du site
+
+Si l'élément <main> existe, Google se concentrera sur son contenu pour le
+référencement et oubliera le reste de votre site. TRES IMPORTANT !!!
+-->
+<main>
+
+
+    <img class="profile-photo"
+         src="img/laure-dinateur-graphiste.jpg"
+         alt="Photo de Laure Dinateur"
+    >    <!-- Ne pas oublier le texte alternatif ALT des images -->
+
+    <!-- Titre principal du site, il ne doit y en avoir qu'un dans la page et
+         il faut le placer dans <main> -->
+    <h1>
+        Laure Dinateur <br>
+        Présentation
+    </h1>
+
+    <p>Hello, je suis <strong>Laure Dinateur</strong> !
+        Bienvenue sur mon portfolio ou je partage
+        mes réalisations favorites.</p>
+
+    <p>Quand je ne dessine pas, j'aime faire du sport, jouer à des jeux vidéos,
+        boire un bon café ou quelque chose de plus corsé.</p>
+
+    <p>Vous pouvez me suivre sur Twitter, mon nom d'utilisateur est
+        <a href="https://twitter.com/lauredi">@lauredi</a>.</p>
+</main>
+<!-- Pied de page du site -->
+<footer>
+    <nav>
+        <ul>
+            <li>
+                <a href="https://twitter.com/lauredi">
+                    <img src="img/twitter-draw.png" alt="Twitter">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/laure.dinateur">
+                    <img src="img/facebook-draw.png" alt="Facebook">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div>&copy;2021 Laure Dinateur</div>
+    <!-- Utiliser les HTML entities pour intégrer des caractères spéciaux à
+    votre page comme le copyright : © => &copy;
+    Référence : https://dev.w3.org/html5/html-author/charref
+    -->
+</footer>
+</body>
+</html>
