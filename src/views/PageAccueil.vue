@@ -1,6 +1,7 @@
 <script setup>
 // Tableau des réalisations
 import FicheRealisation from '@/components/FicheRealisation.vue'
+import { onMounted } from 'vue'
 
 const realisations = [
   {
@@ -29,6 +30,10 @@ const realisations = [
     description: 'Répétition de formes'
   }
 ]
+
+onMounted(() => {
+  document.title = 'Laure Dinateur | Graphiste'
+})
 </script>
 
 <template>

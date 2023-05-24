@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  document.title = 'Informations | Laure Dinateur'
+})
+</script>
 
 <template>
   <main class="page-infos">
