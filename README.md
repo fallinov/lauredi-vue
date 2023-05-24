@@ -69,8 +69,8 @@ dans le dossier `templates/` de ce projet.**
 
 ### Étape 2 - Intégration des contenus HTML/CSS et images
 * Copie des images : copier les images dans : `public/img/`
-* 
-* Importation du CSS  :
+* Remplacer 
+* Importation du CSS :
   * Renommer `templates/css/main.css` en `base.css`
   * Copier les fichiers de `templates/css` dans : `src/assets`
 * Dans `src/assets/main.css` importer les fichiers CSS que vous venez de copier
