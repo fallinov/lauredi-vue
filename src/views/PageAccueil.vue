@@ -40,7 +40,7 @@ const realisations = [
     <ul class="realisations">
       <fiche-realisation
         v-for="realisation in realisations"
-        :key="realisation.image"
+        :key="realisation.titre"
         :image="realisation.image"
         :titre="realisation.titre"
         :description="realisation.description"
