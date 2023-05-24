@@ -69,7 +69,7 @@ dans le dossier `templates/` de ce projet.**
 
 ### Étape 2 - Intégration des contenus HTML/CSS et images
 * Copie des images : copier les images dans : `public/img/`
-* Remplacer 
+* Remplacer `public/favicon.ico` par celle de Laure Dinateur
 * Importation du CSS :
   * Renommer `templates/css/main.css` en `base.css`
   * Copier les fichiers de `templates/css` dans : `src/assets`
@@ -80,8 +80,7 @@ dans le dossier `templates/` de ce projet.**
   @import "responsive.css";
   ```
   ![etape-2-1.png](_supports%2Fetape-2-1.png)
-* Modification de `public/index.html`
-  pour y lier les CSS et modifier les autres informations (titre, icône, ...)
+* Modifier `index.html` et modifier le titre du site `<title>Laure Dinateur</title>`
 * Création de composants pour l'entête le pied de page
 * Ajout du HTML dans l'entête et le pied de page
 * Ajout du HTML dans les différentes pages

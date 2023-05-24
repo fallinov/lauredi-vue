@@ -1,15 +1,13 @@
 <script setup>
-  import { RouterLink, RouterView } from 'vue-router'
+  import { RouterView } from 'vue-router'
+  import EnteteDePage from "@/components/EnteteDePage.vue";
+  import PiedDePage from "@/components/PiedDePage.vue";
 </script>
 
 <template>
-  <RouterLink to="/">Accueil</RouterLink>
-  -
-  <RouterLink to="/infos">Nous contacter</RouterLink>
-  -
-  <RouterLink to="/contact">Nous contacter</RouterLink>
-
-  <RouterView />
+ <entete-de-page />
+ <RouterView />
+ <pied-de-page />
 </template>
 
 <style scoped lang="sass">
