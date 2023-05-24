@@ -1,4 +1,35 @@
-<script setup></script>
+<script setup>
+// Tableau des réalisations
+const realisations = [
+ {
+  image: 'numbers-01.jpg',
+  titre: 'Tableau le chiffre 1',
+  description: 'Expérimentation de couleurs'
+ },
+ {
+  image: 'numbers-02.jpg',
+  titre: 'Tableau le chiffre 2',
+  description: 'Jeu de fondus'
+ },
+ {
+  image: 'numbers-06.jpg',
+  titre: 'Tableau le chiffre 6',
+  description: '80\'s style'
+ },
+ {
+  image: 'numbers-09.jpg',
+  titre: 'Tableau le chiffre 9',
+  description: 'Travail avec les pinceaux'
+ },
+ {
+  image: 'numbers-12.jpg',
+  titre: 'Tableau le chiffre 12',
+  description: 'Répétition de formes'
+ }
+]
+
+
+</script>
 
 <template>
   <main>
@@ -7,43 +38,14 @@
     <h1>Mes réalisations</h1>
 
     <ul class="realisations">
-      <li>
-        <a href="img/numbers-01.jpg">
+      <li
+          v-for="reali in realisations"
+          :key="reali.titre"
+      >
+        <a :href="'img/' + reali.image">
           <figure>
-            <img src="img/numbers-01.jpg" alt="Tableau le chiffre 1" />
-            <figcaption>Expérimentation de couleurs</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a href="img/numbers-02.jpg">
-          <figure>
-            <img src="img/numbers-02.jpg" alt="Tableau le chiffre 2" />
-            <figcaption>Jeu de fondus</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a href="img/numbers-06.jpg">
-          <figure>
-            <img src="img/numbers-06.jpg" alt="Tableau le chiffre 6" />
-            <figcaption>80's style</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a href="img/numbers-09.jpg">
-          <figure>
-            <img src="img/numbers-09.jpg" alt="Tableau le chiffre 9" />
-            <figcaption>Travail avec les pinceaux</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a href="img/numbers-12.jpg">
-          <figure>
-            <img src="img/numbers-12.jpg" alt="Tableau le chiffre 12" />
-            <figcaption>Répétition de formes</figcaption>
+            <img :src="'img/' + reali.image" :alt="reali.titre" />
+            <figcaption>{{ reali.description }}</figcaption>
           </figure>
         </a>
       </li>
