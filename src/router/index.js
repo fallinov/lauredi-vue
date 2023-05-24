@@ -9,19 +9,27 @@ const router = createRouter({
     {
       path: '/',
       name: 'accueil',
-      component: PageAccueil
+      component: PageAccueil,
+      meta: { titre: 'Laure Dinateur | Graphiste' }
     },
     {
       path: '/contact',
       name: 'contact',
-      component: PageContact
+      component: PageContact,
+      meta: { titre: 'Me contacter | Laure Dinateur' }
     },
     {
       path: '/infos/',
       name: 'infos',
-      component: PageInformations
+      component: PageInformations,
+      meta: { titre: 'Informations | Laure Dinateur' }
     }
   ]
+})
+
+// Changement du tire <title> de la page
+router.afterEach((to) => {
+  document.title = to.meta.titre
 })
 
 export default router

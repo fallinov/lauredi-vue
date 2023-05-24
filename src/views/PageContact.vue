@@ -1,10 +1,4 @@
-<script setup>
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  document.title = 'Me contacter | Laure Dinateur'
-})
-</script>
+<script setup></script>
 
 <template>
   <main class="page-contact">

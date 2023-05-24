@@ -30,10 +30,6 @@ const realisations = [
     description: 'Répétition de formes'
   }
 ]
-
-onMounted(() => {
-  document.title = 'Laure Dinateur | Graphiste'
-})
 </script>
 
 <template>
