@@ -7,6 +7,9 @@
 3. Télécharger les paquets `npm install`
 4. Formater les fichiers `npm run format`
 5. Fixer les erreurs de codage `npm run lint`
+6. Démarer le serveur de développement `npm run dev`
+7. Ouvrir l'application dans le navigateur
+   http://localhost:5173/ _(ou autre port indiqué dans la console)_
 
 ## Commandes utiles
 ### Télécharger les paquets
