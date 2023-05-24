@@ -52,15 +52,17 @@ en SPA (Single Page Application) en utilisant :
 dans le dossier `templates/` de ce projet.**
 
 ### Étape 1 - Création des pages et navigation (Vue router)
+![etape-1.gif](_supports%2Fetape-1.gif)
 
-![Exemple de résultat pour étape 2](_supports/etape-2.png "Exemple de résultat pour étape 2")
-
+* Supprimer le style CSS actuel
+  * Supprimer le fichier `src/assets/base.css`
+  * Effacer le contenu du fichier `src/assets/main.css`
 * Créer les pages `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
   dans `src/views/` avec uniquement un `<h1>` contenant le titre de la page.
-* Définir les routes dans `src/router/index.js`, et les tester.
 * Dans `src/App.vue` :
-  * Créer un menu de navigatio en utilisant `<router-link>` pour faire les liens 
+  * Créer un menu de navigatio en utilisant `<router-link>` pour faire les liens
   * Ajout du `<router-view>` qui affichera la page correspondante à la route définie dans `src/router/index.js`
+* Définir les routes dans `src/router/index.js`, et les tester.
 
 ### Étape 2 - Intégration des contenus HTML/CSS et images
 * Copie des images : copier les images dans : `public/img/`
