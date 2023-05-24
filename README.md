@@ -68,6 +68,10 @@ dans le dossier `templates/` de ce projet.**
 * Définir les routes dans `src/router/index.js`, et les tester.
 
 ### Étape 2 - Intégration des contenus HTML/CSS et images
+![etape-2-2.gif](_supports%2Fetape-2-2.gif)
+> Solution de l'étape sur la branche `E2-fin` de ce dépôt
+> ou https://github.com/fallinov/lauredi-vue/tree/E2-fin
+>
 * Copie des images : copier les images dans : `public/img/`
 * Remplacer `public/favicon.ico` par celle de Laure Dinateur
 * Importation du CSS :
@@ -85,6 +89,11 @@ dans le dossier `templates/` de ce projet.**
 * Ajout du HTML dans l'entête et le pied de page
 * Ajout du HTML dans les différentes pages
 * Ajout de la classe "actif" au lien actif du menu.
+  * Utiliser la propriété `exact-active-class` de `<router-link>` pour ajouter la classe "actif" uniquement
+    si le lien est actif.
+    ```html
+    <router-link to="/" exact-active-class="actif">Accueil</router-link>
+    ```
 * (optionnel) Ajouter le code CSS spécifique aux pages
   dans les composants de page `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
 
