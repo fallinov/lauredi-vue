@@ -5,7 +5,7 @@
 <template>
   <RouterLink to="/">Accueil</RouterLink>
   -
-  <RouterLink to="/infos">Nous contacter</RouterLink>
+  <RouterLink to="/infos">Informations</RouterLink>
   -
   <RouterLink to="/contact">Nous contacter</RouterLink>
 
