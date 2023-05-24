@@ -11,6 +11,8 @@
 7. Ouvrir l'application dans le navigateur
    http://localhost:5173/ _(ou autre port indiqué dans la console)_
 
+![etape-0.png](_supports%2Fetape-0.png)
+
 ## Commandes utiles
 ### Télécharger les paquets
 ```sh
