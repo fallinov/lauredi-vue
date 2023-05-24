@@ -54,6 +54,9 @@ dans le dossier `templates/` de ce projet.**
 ### Étape 1 - Création des pages et navigation (Vue router)
 ![etape-1.gif](_supports%2Fetape-1.gif)
 
+> Solution de l'étape sur la branche `E1-fin` de ce dépôt
+> ou https://github.com/fallinov/lauredi-vue/tree/E1-fin
+
 * Supprimer le style CSS actuel
   * Supprimer le fichier `src/assets/base.css`
   * Effacer le contenu du fichier `src/assets/main.css`
@@ -66,7 +69,17 @@ dans le dossier `templates/` de ce projet.**
 
 ### Étape 2 - Intégration des contenus HTML/CSS et images
 * Copie des images : copier les images dans : `public/img/`
-* Copie des CSS dans : `public/css/`
+* 
+* Importation du CSS  :
+  * Renommer `templates/css/main.css` en `base.css`
+  * Copier les fichiers de `templates/css` dans : `src/assets`
+* Dans `src/assets/main.css` importer les fichiers CSS que vous venez de copier
+  ```css
+  @import "normalize.css";
+  @import "base.css";
+  @import "responsive.css";
+  ```
+  ![etape-2-1.png](_supports%2Fetape-2-1.png)
 * Modification de `public/index.html`
   pour y lier les CSS et modifier les autres informations (titre, icône, ...)
 * Création de composants pour l'entête le pied de page
