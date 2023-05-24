@@ -108,6 +108,7 @@ dans le dossier `templates/` de ce projet.**
 ### Étape 4 - Créer un composant `Realisation.vue` 
 * Créer un composant représentant une réalisation avec une ou plusieurs propriétés (props)
   lui permettant de recevoir les données de la réalisation.
+* Déplacer le code CSS prorpe à la réalisation dans le composant `Realisation.vue`
 
 ### Étape 5 - Modifier le titre du document HTML `<title>` 
 * Ajouter le lifecycle hook `beforeMount` aux pages `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`

@@ -1,5 +1,7 @@
 <script setup>
 // Tableau des réalisations
+import FicheRealisation from "@/components/FicheRealisation.vue";
+
 const realisations = [
  {
   image: 'numbers-01.jpg',
@@ -38,17 +40,13 @@ const realisations = [
     <h1>Mes réalisations</h1>
 
     <ul class="realisations">
-      <li
-          v-for="reali in realisations"
-          :key="reali.titre"
-      >
-        <a :href="'img/' + reali.image">
-          <figure>
-            <img :src="'img/' + reali.image" :alt="reali.titre" />
-            <figcaption>{{ reali.description }}</figcaption>
-          </figure>
-        </a>
-      </li>
+      <fiche-realisation
+        v-for="realisation in realisations"
+        :key="realisation.image"
+        :image="realisation.image"
+        :titre="realisation.titre"
+        :description="realisation.description"
+       />
     </ul>
   </main>
 </template>
@@ -58,34 +56,5 @@ const realisations = [
   list-style-type: none; /* suppression des puces */
   margin: 0;
   padding: 0;
-}
-
-.realisations li {
-  display: inline-block;
-  width: 45%;
-  margin: 2.5%;
-  vertical-align: top;
-}
-
-.realisations li a {
-  color: #011627;
-}
-
-.realisations figure {
-  margin: 0;
-  background-color: #e7e9eb;
-}
-
-.realisations figcaption {
-  padding: 10px;
-  font-size: 1rem;
-}
-
-/* Pour les écrans >= 480px */
-@media only screen and (min-width: 480px) {
-  /*Passage sur 3 cols*/
-  .realisations li {
-    width: calc(100% / 3 - 5%);
-  }
 }
 </style>
