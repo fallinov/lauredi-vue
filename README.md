@@ -86,6 +86,9 @@ dans le dossier `templates/` de ce projet.**
   ![etape-2-1.png](_supports%2Fetape-2-1.png)
 * Modifier `index.html` et modifier le titre du site `<title>Laure Dinateur</title>`
 * Création de composants pour l'entête le pied de page
+  * Déplacer dans les composants le CSS spécifique à l'entête et au pied de page
+  * Dans le css remplacer `header nav a[href='index.html']` par `header nav a[href='/'] qui correspond à la route
+    de la page d'accueil de l'application.
 * Ajout du HTML dans l'entête et le pied de page
 * Ajout du HTML dans les différentes pages
 * Ajout de la classe "actif" au lien actif du menu.
@@ -94,8 +97,8 @@ dans le dossier `templates/` de ce projet.**
     ```html
     <router-link to="/" exact-active-class="actif">Accueil</router-link>
     ```
-* (optionnel) Ajouter le code CSS spécifique aux pages
-  dans les composants de page `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
+* Déplacer le code CSS spécifique aux pages dans `src/assets/base.css` et `src/assets/responsive.css`
+  directement dans les composants de page `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
 
 ### Étape 3 - Création d'un tableau des réalisations
 * Ajouter le tableau JavaScript des réalisations (image, titre, description) au composant `PageAccueil.vue`
@@ -105,6 +108,7 @@ dans le dossier `templates/` de ce projet.**
 ### Étape 4 - Créer un composant `Realisation.vue`
 * Créer un composant représentant une réalisation avec une ou plusieurs propriétés (props)
   lui permettant de recevoir les données de la réalisation.
+* Déplacer le code CSS prorpe à la réalisation dans le composant `Realisation.vue`
 
 ### Étape 5 - Modifier le titre du document HTML `<title>`
 * Ajouter le lifecycle hook `beforeMount` aux pages `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
@@ -114,11 +118,22 @@ dans le dossier `templates/` de ce projet.**
   * `PageInformations.vue` => `"Informations | Laure Dinateur"`
 
 ### Étape 6 - Modifier le titre du document HTML via le routeur `<title>`
+
+* Ajouter une propriété `titre` au champ meta de route
+  https://router.vuejs.org/fr/guide/advanced/meta.html#champs-meta-de-route
+  ```javascript
+  {
+    path: '/infos/',
+    name: 'infos',
+    component: PageInformations,
+    meta: { titre: 'Informations | Laure Dinateur' }
+  }
+  ```
 * Changer le titre du document à chaque changement de route en utilisant
   l'intercepteur de navigation `router.afterEach((to, from)`
   https://router.vuejs.org/fr/guide/advanced/navigation-guards.html#intercepteurs-de-navigation
-* Ajouter une propriété `titre` au champ meta de route
-  https://router.vuejs.org/fr/guide/advanced/meta.html#champs-meta-de-route
-* Note : Effectuer le changement du titre de la page dans un `Vue.nextTick`
-  https://fr.vuejs.org/v2/guide/reactivity.html#File-d%E2%80%99attente-de-mise-a-jour-asynchrone
-
+  ```javascript
+  router.afterEach((to) => {
+      document.title = to.meta.titre
+  })
+  ```
