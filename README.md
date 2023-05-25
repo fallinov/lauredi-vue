@@ -2,7 +2,7 @@
 
 ## Avant de démarrer l'exercice
 
-1. Cloner ce dépôt 
+1. Cloner ce dépôt
 2. Créer une nouvelle branche. Ex: `steve-étape-1`
 3. Télécharger les paquets `npm install`
 4. Formater les fichiers `npm run format`
@@ -41,7 +41,7 @@ npm run lint
 
 ## Objectifs de l'exercice
 
-Transformer le site de Laure Dinateur https://kode.ch/101/lauredi/ 
+Transformer le site de Laure Dinateur https://kode.ch/101/lauredi/
 en SPA (Single Page Application) en utilisant :
 * Vue.js V3 : https://fr.vuejs.org/v2/guide/
 * Vue CLI : https://cli.vuejs.org/
@@ -105,11 +105,12 @@ dans le dossier `templates/` de ce projet.**
 * Vous trouverez le tableau des réalisations dans le fichier `templates/realisations.js`
 * Parcourir le tableau pour générer l'affichage des réalisations.
 
-### Étape 4 - Créer un composant `Realisation.vue` 
+### Étape 4 - Créer un composant `Realisation.vue`
 * Créer un composant représentant une réalisation avec une ou plusieurs propriétés (props)
   lui permettant de recevoir les données de la réalisation.
+* Déplacer le code CSS prorpe à la réalisation dans le composant `Realisation.vue`
 
-### Étape 5 - Modifier le titre du document HTML `<title>` 
+### Étape 5 - Modifier le titre du document HTML `<title>`
 * Ajouter le lifecycle hook `beforeMount` aux pages `PageAccueil.vue`, `PageContact.vue` et `PageInformations.vue`
 * Utiliser `document.title` pour modifier le titre du document en fonction de la page :
   * `PageAccueil.vue` => `"Laure Dinateur | Graphiste"`
@@ -117,11 +118,22 @@ dans le dossier `templates/` de ce projet.**
   * `PageInformations.vue` => `"Informations | Laure Dinateur"`
 
 ### Étape 6 - Modifier le titre du document HTML via le routeur `<title>`
+
+* Ajouter une propriété `titre` au champ meta de route
+  https://router.vuejs.org/fr/guide/advanced/meta.html#champs-meta-de-route
+  ```javascript
+  {
+    path: '/infos/',
+    name: 'infos',
+    component: PageInformations,
+    meta: { titre: 'Informations | Laure Dinateur' }
+  }
+  ```
 * Changer le titre du document à chaque changement de route en utilisant
   l'intercepteur de navigation `router.afterEach((to, from)`
   https://router.vuejs.org/fr/guide/advanced/navigation-guards.html#intercepteurs-de-navigation
-* Ajouter une propriété `titre` au champ meta de route
-  https://router.vuejs.org/fr/guide/advanced/meta.html#champs-meta-de-route
-* Note : Effectuer le changement du titre de la page dans un `Vue.nextTick`
-  https://fr.vuejs.org/v2/guide/reactivity.html#File-d%E2%80%99attente-de-mise-a-jour-asynchrone
-
+  ```javascript
+  router.afterEach((to) => {
+      document.title = to.meta.titre
+  })
+  ```
